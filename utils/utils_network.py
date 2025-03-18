@@ -85,7 +85,7 @@ class NeighConv(nn.Module):
             # self.neigh_conv.weight[:, :, 0, 0] = 0    # uncomment for + neighborhood 
             # self.neigh_conv.weight[:, :, 2, 0] = 0
             # self.neigh_conv.weight[:, :, 0, 2] = 0
-            # self.neigh_conv.weight[:, :, 2, 2] = 0
+            self.neigh_conv.weight[:, :, 2, 2] = 0
         return self.neigh_conv(x)
 
 class OutConv(nn.Module):
